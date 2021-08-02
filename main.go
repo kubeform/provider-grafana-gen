@@ -39,13 +39,14 @@ func main() {
 	}
 
 	opts := &util.GeneratorOptions{
-		ProviderName:         "grafana",
-		ProviderNameOriginal: "grafana",
-		ProviderData:         grafana.Provider(os.Getenv("PROVIDER_VERSION"))(),
-		ProviderImportPath:   "github.com/grafana/terraform-provider-grafana/grafana",
-		Version:              "v1alpha1",
-		APIsPath:             apisPath,
-		ControllerPath:       controllerPath,
+		ProviderName:             "grafana",
+		ProviderNameOriginal:     "grafana",
+		ProviderData:             grafana.Provider(os.Getenv("PROVIDER_VERSION"))(),
+		ProviderGetterMethodBody: `grafana.Provider("")()`,
+		ProviderImportPath:       "github.com/grafana/terraform-provider-grafana/grafana",
+		Version:                  "v1alpha1",
+		APIsPath:                 apisPath,
+		ControllerPath:           controllerPath,
 	}
 	err := util.Generate(opts)
 	if err != nil {
