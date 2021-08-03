@@ -3,7 +3,7 @@
 
 # Kubeform Grafana Provider Code Generator
 
-Generates code for Kubeform Grafana Provider
+Generates code for [Terraform Grafana Provider](https://github.com/grafana/terraform-provider-grafana)
 
 ## Installation
 
