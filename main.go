@@ -45,6 +45,7 @@ func main() {
 		ProviderGetterMethodBody: `grafana.Provider("")()`,
 		ProviderImportPath:       "github.com/grafana/terraform-provider-grafana/grafana",
 		ProviderConfig:           "grafana/grafana",
+		TfPluginVersion:          "v2.8.0",
 		Version:                  "v1alpha1",
 		APIsPath:                 apisPath,
 		ControllerPath:           controllerPath,
